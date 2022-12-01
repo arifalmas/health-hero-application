@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
+html{
+  background-color: #5FD6CF;
+}
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+.app{
+  min-height: 100vh;
+  position: relative;
+  top: 0;
+}
+/* tailwind components */
+@layer components {
+
+  /* Wrapper container */
+  .wrapper{
+    @apply 2xl:scale-[0.9] xl:scale-100 ;
+  }
+  .container {
+    @apply !max-w-[1750px] mx-auto px-5;
+  }
+
+  /* Card  */
+  .card {
+    @apply sm:!min-w-[390px] !min-w-[320px] xl:w-auto lg:w-full w-full shadow-lg rounded-3xl overflow-hidden bg-white md:p-10 p-7;
+  }
+
+  .card-title {
+    @apply md:text-3xl text-2xl font-bold text-secondary mb-3;
+  }
+
+  .card-text {
+    @apply md:text-2xl text-lg text-secondary font-semibold mb-3 md:leading-10 leading-7;
+  }
+
+  .card-rounded {
+    @apply rounded-full bg-tertiary text-white font-medium w-fit 2xl:text-2xl lg:text-xl text-lg text-center px-3 py-1;
+  }
+
+  .card-button {
+    @apply rounded-full bg-tertiary text-white font-medium w-fit 2xl:text-2xl lg:text-xl text-lg text-center md:py-2 md:px-6 px-4 py-1 ;
+  }
+
+  .card-short-info {
+    @apply block w-fit rounded-full border-2 md:py-2 md:px-4 px-3 py-1 mr-2 border-tertiary text-secondary 2xl:text-2xl lg:text-xl text-base text-center font-semibold;
+  }
+  /* Scrollbar hide */
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+}
